@@ -7,23 +7,35 @@ var numberOfEuroes = prompt("Input number of euros", )
 numberOfEuroes = parseFloat(numberOfEuroes);
 
 function convertorUSDtoUAH(){
-    if(!isNaN(numberOfDollars)){
+    while(isNaN(numberofDollars) || numberOfDollars < 0.01 ){
+        alert("You are insert the incorect number. Please input number that are more then a 0 .");
+        numberOfDollars = parseFloat(prompt("Input number of dollars",))
+    }
     var USDtoUAH = dollar * numberOfDollars;
     return USDtoUAH;
-    }
-    else{
-        alert("number of dollars are not a number");
-    }
+    // if(!isNaN(numberOfDollars)){
+    // var USDtoUAH = dollar * numberOfDollars;
+    // return USDtoUAH;
+    // }
+    // else{
+    //     alert("number of dollars are not a number");
+    // }
 }
 
 function convertorEURtoUAH(){
-    if(typeof(numberOfDollars)=="number"){
-        var EURtoUAH = euro * numberOfEuroes;
-        return EURtoUAH;
+    while(isNaN(numberOfEuroes) || numberOfEuroes < 0.01 ){
+        alert("You are insert the incorect number. Please input number that are more then a 0 .");
+        numberOfEuroes = parseFloat(prompt("Input number of dollars",))
     }
-    else{
-        alert("number of euroes are not a number");
-    }
+    var EURtoUAH = dollar * numberOfEuroes;
+    return EURtoUAH;
+    // if(typeof(numberOfDollars)=="number"){
+    //     var EURtoUAH = euro * numberOfEuroes;
+    //     return EURtoUAH;
+    // }
+    // else{
+    //     alert("number of euroes are not a number");
+    // }
 }
 
 alert(numberOfEuroes + " euros are equal " + convertorEURtoUAH() + ", " 
